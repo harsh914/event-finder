@@ -1,0 +1,184 @@
+﻿
+body{
+
+  /* Full height */
+  height: 550px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+    font-family: 'Oswald';
+}
+
+.container{
+    background-color: white;
+    width: 40%;
+    
+    margin-top: 10vh;
+    
+    padding: 0;
+}
+
+h1, h5{
+    font-size:25px;
+    text-align: center;
+    color:purple;
+    font-weight: bold;
+}
+
+h5{
+    font-size:18px;
+    font-weight: normal;
+}
+
+.form-group{
+    font-size: 1.5vw;
+    margin-left: 45%;
+    width: 40%;
+}
+
+#pwd{
+    margin-top:10%;
+}
+#usr{
+    margin-top:15%;
+}
+
+#user{
+    margin-top: 10%;
+}
+.create-acc{
+    margin-top:5%;
+}
+#submit-button{
+    margin-top: 3%;
+    margin-left: 20%;
+}
+
+#reg-button{
+    margin-top: 0%;
+    margin-left: 20%;
+}
+
+input.form-control{
+    height: 50px;
+}
+
+input#user, input#email, input#passwd{
+    height: 40px;
+}
+
+.existing-acc{
+    margin-top: 4%;
+}
+
+@media screen and (max-width: 1250px){
+    .existing-acc{
+    margin-top: 2%;
+}
+}
+
+p{
+    margin: 0 0 0 60%;
+}
+
+a{
+    margin-left: 10%;
+    font-weight: bold;
+}
+
+a#create{
+    margin-left: 22%;
+}
+
+a#loginn{
+    margin-left: 25%;
+}
+
+button, #reg-button, #submit-button{
+    background-color:cornflowerblue;
+    border-radius: 10px;
+    color: white;
+    width: 130px;
+    height: 38px;
+}
+
+
+.container{
+        background-color: white;
+        width: 100%;
+        max-width: 350px;
+		height:400px;
+		border-radius: 15px;
+		box-shadow: 5px 5px 10px #888888;
+        margin-top: 100px;
+        padding: 0;
+        padding-bottom: 5%;
+    }
+    #outer-container{
+        min-width: 50px;
+    }
+    
+    h1{
+        font-size: 20px;
+    }
+    h5{
+        font-size: 15px;
+    }
+    .image{
+        float: left;
+        width: 100%;
+        height:40%;
+    }
+    img{
+        width: 20%;
+        text-align: center;
+    }
+    .form-group{
+        margin-left: 10%;
+        width:80%;
+    }
+    .create-acc, .existing-acc{
+        margin-left: 35%;
+    }
+    div.existing-acc p{
+        margin: 20px 0 0 -30px;
+    }
+    div.create-acc p{
+        margin: 30px 0 0 -20px;
+    }
+    a#create{
+        margin-left: 1%;
+    }
+    a#loginn{
+        margin-left: 10%;
+    }
+    input#user, input#email, input#passwd{
+    height: 50px;
+}
+    #submit-button, #reg-button{
+        margin-top: 5%;
+         width: 100px;
+         height: 40px;
+         margin-left: 35%;
+    }
+
+
+@media screen and (max-width: 300px){
+    .create-acc, .existing-acc{
+        margin-left: 30%;
+    }
+    #submit-button{
+        
+         margin-left: 30%;
+    }
+}
+
+label{
+   margin-left: 35px;
+   margin-top: 20px;
+}
+select{
+    
+}

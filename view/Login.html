@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+	<meta charset="utf-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="../static/css/LoginStyleSheet.css" rel="stylesheet" />
+	
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+</head>
+<body style="background-image:url('../static/images/background.jpg')">
+	<!-- content -->
+    <div id="outer-container" class="container">
+        <div class="header">
+            <h1>Log In</h1>
+        </div>
+
+		<form method="POST" action="./Login">
+			<div class="form-group">
+				<input id="usr" type="text" name="username" placeholder="Username"  class="form-control" required>
+			</div>
+			<div class="form-group">
+				<input id="pwd" type="password" name="password" placeholder="Password" class="form-control" required>
+			</div>
+			<input type="submit" id="submit-button" value="Login"/>
+		</form>
+        <div class="create-acc">
+            <p>Dont have an account?</p>
+            <a id="create" href="http://localhost:8888/SignUp">Create Account</a>
+        </div>
+    </div>
+
+</body>
+</html>

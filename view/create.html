@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Event</title>
+	<meta charset="utf-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="../static/css/LoginStyleSheet.css" rel="stylesheet" />
+	<link href="../static/css/styles.css" rel="stylesheet" />
+	
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+</head>
+<script>
+	function validateDate() {
+		var UserDate = document.getElementById("pwd").value;
+		var ToDate = new Date();
+		if (new Date(UserDate).getTime() < ToDate.getTime()) {
+			  alert("The Date must be Bigger than today date");
+			  document.getElementById("pwd").value = '';
+			  return false;
+		 }
+		return true;
+	}
+</script>
+
+<body style="background-image:url('../static/images/background.jpg')">
+	<!-- content -->
+    <div id="outer-container" class="container">
+        <div class="header">
+            <h1>Create Event</h1>
+        </div>
+
+		<form method="POST" action="./CreateEvent/Create">
+			<div class="form-group">
+				<input id="usr" type="text" name="name" placeholder="Event Title"  class="form-control" required>
+			</div>
+			<div class="form-group">
+				<input id="pwd" type="date" name="date" placeholder="Date" onchange="validateDate()" class="form-control" required>
+			</div>
+			<label for="type">Type</label>
+				<select class="type" name ="type" id="cars" name="cars" style="width:200px;height:40px;font-size:20px; margin-left: 30px">
+				  <option value="meeting">Meeting</option>
+				  <option value="presentation">Presentation</option>
+				  <option value="birthday">Birthday</option>
+				  <option value="wedding">Wedding</option>
+				  <option value="party">Party</option>
+				</select>
+			<input type="submit" id="submit-button" style="margin-top:40px" value="Create"/>
+		</form>
+        
+    </div>
+
+</body>
+</html>

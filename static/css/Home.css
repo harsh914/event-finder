@@ -1,0 +1,255 @@
+﻿body{
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+html {
+    margin: 0;
+    max-width: 1920px;
+}
+body{
+    font-family: 'Oswald';
+}
+#exampleText1 {
+    display: hidden;
+}
+
+.container {
+    width: 1005px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.examples {
+    text-align: center;
+    margin-left: 15px;
+}
+
+.image:hover {
+    -webkit-transform: scale(1.35);
+    transform: scale(1.35);
+    opacity: 0.9;
+}
+
+.image {
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+    padding: 15px;
+    margin: auto;
+}
+
+.col-2 {width: 16.66%;}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+.pics{
+
+    opacity: 1;
+    transition: .5s ease;
+    backface-visibility: hidden;
+
+    border: 1px solid #E8E8E8;
+    border-radius: 15px;
+    box-shadow: 2px 2px 20px #888888;
+    background-color: white;
+    margin: 1em;
+    border-color: #E8E8E8;
+    position: relative;
+    
+    max-width: 1000px;
+    padding: 0.5%;
+    align-items:center;
+    height: 336px;
+    width: 25%;
+}
+
+.price{
+    color: #EF6622;
+    text-decoration: double;
+    font-size: 17px;
+    
+    padding-left:3px;
+    font-weight:700;
+    padding-top:3px;
+    padding-bottom:14px
+}
+.middle {
+ 
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -40%);
+  -ms-transform: translate(-40%, -40%);
+  text-align: center;
+}
+.invite{
+    text-align:center;
+}
+.pinfo{
+   font-size: 18px;
+   padding-left:3px;
+   padding-right:2px;
+   padding-top: 5px;
+   text-align:center;
+
+}
+.invitebtn{
+
+    border:none;
+    
+    padding-left: 32%;
+    padding-right: 32%;
+    position:center;
+    color: purple;
+    font-family: 'Oswald';
+    font-size: 17px;
+    cursor: pointer;
+    display: inline-block;
+    background-color: lightblue;
+    margin-top:10px;
+}
+.invitebtn:hover{
+    background-color: purple;
+    color: lightblue;
+}
+b{
+    color: #EF6622;
+    text-decoration: double;
+    font-size: 1px;
+    text-align: right;
+}
+.productcontainer{
+
+    display: inline;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+/*#example1:hover {
+            opacity: .1;
+         }*/
+
+span.text-content {
+    color: white;
+    cursor: pointer;
+    display: table;
+    height: 150px;
+    left: 15px;
+    position: absolute;
+    top: 15px;
+    width: 280px;
+    opacity: 0;
+    -webkit-transition: opacity 500ms;
+    -moz-transition: opacity 500ms;
+    -o-transition: opacity 500ms;
+    transition: opacity 500ms;
+}
+
+span.text-content span {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.banner {
+    text-align: center;
+    font-weight: 800;
+    padding-bottom: 80px;
+}
+
+.sectionTitle {
+    padding-left: 40px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    color: #EF6622;
+}
+
+li.image {
+    margin: auto;
+}
+
+.sidenav {
+    display: none;
+    height: 400px;
+    width: 100%;
+    z-index: 6;
+    top: 306px;
+    position: relative;
+    color: #eee;
+    left: 0;
+    position: absolute;
+    background: #555;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    overflow-x: hidden;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #bbb;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover,
+.offcanvas a:focus {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0px;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+header {
+    width: auto;
+    padding-left: 18%;
+    background: #F9A31A;
+    color: #B51F59;
+    height: 30px;
+    margin-top: 30px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    font-weight: 200;
+    font-size: 25px;
+}
+
+p {
+    margin: 0;
+}
+
+#row2 {
+    position: relative;
+}

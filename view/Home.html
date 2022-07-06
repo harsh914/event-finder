@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>My Events</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="stylesheet" href="../static/css/Home.css">
+    <link rel="stylesheet" href="../static/css/tables.css">
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/css/all.css">
+    <link rel="stylesheet" href="../static/css/all.min.css">
+
+</head>
+
+<script>
+	function inviteUser(id){
+		var username = prompt("Enter username of user you want to invite to this event");
+		
+		xhttp = new XMLHttpRequest();
+		var s ="";
+		for(var i=1; i<id.length; i++)
+			s+=id[i];
+		var integer = parseInt(s, 10);
+			
+		xhttp.open("POST", "http://localhost:8888/Home/Invite", true);
+		xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		xhttp.send("id=" + integer + "&person=" + username);
+			  
+		xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.responseText!="") {
+				alert(this.responseText);
+			}
+		};
+	}
+	
+	function deleteEvent(id){
+		xhttp = new XMLHttpRequest();
+		var s ="";
+		for(var i=1; i<id.length; i++)
+			s+=id[i];
+		var integer = parseInt(s, 10);
+			
+		xhttp.open("GET", "http://localhost:8888/Home/Delete?id=" + integer, true);
+		xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		xhttp.send();
+			  
+		xhttp.onreadystatechange = function() {
+			if (this.readyState == 4) {
+				alert("Deleted!");
+				document.getElementById("container").innerHTML =
+				this.responseText;
+			}
+		};
+	}
+	
+	function deleteEvent(id){
+		xhttp = new XMLHttpRequest();
+		var s ="";
+		for(var i=1; i<id.length; i++)
+			s+=id[i];
+		var integer = parseInt(s, 10);
+			
+		xhttp.open("GET", "http://localhost:8888/Home/Delete?id=" + integer, true);
+		xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		xhttp.send();
+			  
+		xhttp.onreadystatechange = function() {
+			if (this.readyState == 4) {
+				alert("Deleted!");
+				document.getElementById("container").innerHTML =
+				this.responseText;
+			}
+		};
+	}
+	
+	function viewEventDetails(id){
+		var s ="";
+		for(var i=2; i<id.length; i++)
+			s+=id[i];
+		var integer = parseInt(s, 10);
+			
+		var link = document.createElement("a");
+		document.body.appendChild(link);
+		link.href = "http://localhost:8888/EventDetails?id=" + integer;
+		link.click();
+		document.body.removeChild(link);
+	}
+	
+	function editEvent(id){
+		var s ="";
+		for(var i=1; i<id.length; i++)
+			s+=id[i];
+		var integer = parseInt(s, 10);
+			
+		var link = document.createElement("a");
+		document.body.appendChild(link);
+		link.href = "http://localhost:8888/Edit?id=" + integer;
+		link.click();
+		document.body.removeChild(link);
+	}
+	
+</script>
+
+<body style="background-image:url('../static/images/background.jpg')">
+    <div class="topnav">
+		<a href="#" style="margin-left:25%" class="active">My Events</a>
+		<a href="http://localhost:8888/CreateEvent">Create Event</a>
+		<a href="http://localhost:8888/InvitedEvents">Invited Events</a>
+		<a href="http://localhost:8888/RSVPd">RSVPd Events</a>
+        <a href="http://localhost:8888/Home/logout">Log Out</a>
+    </div>
+    <div>
+        
+        <div class="container">
+               
+                <div class="productcontainer" id="container">
+                    
+                     <!-- content -->
+                
+                </div>
+        </div>
+    </div>
+
+</body>
+</html>

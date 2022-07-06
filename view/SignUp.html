@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="../static/css/LoginStyleSheet.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script>
+		function checkPassword(){
+			if (document.getElementById("passwd1").value != document.getElementById("passwd2").value){
+                alert("Passwords must match");
+                return false;
+            }
+		}
+	
+	</script>
+</head>
+<body style="background-image:url('../static/images/background.jpg')">
+	<!-- content -->
+    <div id="outer-container" class="container" style="height:500px;margin-top:80px">
+        <div class="header">
+            <h1>Sign Up</h1>
+        </div>
+
+		<form method="POST" action="./SignUp">
+			<div class="form-group">
+				<input id="user" type="text" name="name" placeholder="Name" class="form-control" required>
+			</div>
+			<div class="form-group">
+				<input id="email" type="text" name="username" placeholder="Username" class="form-control" required>
+			</div>
+			<div class="form-group">
+				<input id="passwd1" type="password" name="password" placeholder="Password" class="form-control" required>
+			</div>
+			<div class="form-group">
+				<input id="passwd2" type="password" placeholder="Confirm Password" onchange="checkPassword()" class="form-control" required>
+			</div>
+			<input type="submit" id="reg-button" onclick="checkPassword()" value="Register">
+		</form>
+        <div class="existing-acc">
+            <p>Already have an account?</p>
+            <a id="loginn" href="http://localhost:8888/Login">Login</a>
+        </div>
+    </div>
+
+</body>
+</html>

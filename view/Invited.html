@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Invited Event</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="stylesheet" href="../static/css/Home.css">
+    <link rel="stylesheet" href="../static/css/tables.css">
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/css/all.css">
+    <link rel="stylesheet" href="../static/css/all.min.css">
+
+</head>
+<script>
+	function RSVP(id){
+		xhttp = new XMLHttpRequest();
+		var s ="";
+		for(var i=1; i<id.length; i++)
+			s+=id[i];
+		var integer = parseInt(s, 10);
+			
+		xhttp.open("POST", "http://localhost:8888/InvitedEvents/RSVP", true);
+		xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		xhttp.send("id=" + integer);
+			  
+		xhttp.onreadystatechange = function() {
+			if (this.readyState == 4) {
+				alert("You have RSVP'd!");
+				document.getElementById("container").innerHTML =
+				this.responseText;
+			}
+		};
+	
+	}
+
+</script>
+
+<body style="background-image:url('../static/images/background.jpg')">
+    <div class="topnav">
+		<a href="http://localhost:8888/Home" style="margin-left:25%">My Events</a>
+		<a href="http://localhost:8888/CreateEvent" >Create Event</a>
+		<a href="#" class="active">Invited Events</a>
+		<a href="http://localhost:8888/RSVPd" >RSVPd Events</a>
+        <a href="http://localhost:8888/InvitedEvents/logout">Log Out</a>
+    </div>
+    <div>
+        <div class="container">
+               
+                <div class="productcontainer" id = "container">
+                    
+                    <!-- content -->    
+                 
+                
+                </div>
+        </div>
+    </div>
+
+</body>
+</html>

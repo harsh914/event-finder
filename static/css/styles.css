@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    font-family: 'Oswald';
+    background-color: white;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: purple;
+    position: relative;
+}
+
+.topnav a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 7px 30px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.check {
+    float: left;
+    color: #F9A31A;
+    text-align: center;
+    padding: 7px 30px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.topnav a:hover {
+    background-color: lightblue;
+    color: purple;
+}
+
+.topnav a.active {
+    background-color: #2E86C1;
+    color: white;
+}
+
+.center {
+    display: block;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
