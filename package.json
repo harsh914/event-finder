@@ -7,5 +7,20 @@
     "mysql2": "^2.3.3",
     "node": "^18.4.0",
     "session": "^0.1.0"
-  }
+  },
+  "name": "event-management",
+  "description": "A Web Application for managing events created using NodeJS, ExpressJS and MySQL",
+  "version": "1.0.0",
+  "main": "main.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "event-finder"
+  },
+  "author": "Harsh dwivedi",
+  "license": "ISC"
 }
