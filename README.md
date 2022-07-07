@@ -8,10 +8,7 @@ In this application you can:
 4) Edit an existing event
 5) Delete an existing event
 6) Invite other users to your event
-7) RSVP to an event
-8) View all events to which you are invited
-9) View all events to which you have RSVPd
-10) View all users who have RSVPd to your event 
+
 
 ## How to run 
 
